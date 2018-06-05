@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar color="lista">
+    <ion-title>Mapa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!-- indicamos que parametros debe enseñar al inciar, y tambien le añadimos una funcion llamada event   -->
+<agm-map [latitude]="latitud" [longitude]="longitud" (mapClick)="seleccionar($event)">
+  <agm-marker [latitude]="latitud" [longitude]="longitud" *ngIf="localizador"></agm-marker>
+</agm-map>
+
+</ion-content>

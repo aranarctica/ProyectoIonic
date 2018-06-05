@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar color="lista">
+    <ion-title>Camara</ion-title>
+  </ion-navbar>
+
+</ion-header>
+   
+
+<ion-content padding>
+  <!--esto sirve para enseñar las fotos que se han sacado-->
+<img [src]="foto" *ngIf="foto" />
+</ion-content>
+<ion-footer padding>
+<!--Al darle al boton de la camara inicia una funcion llamada tomarFoto-->
+ <span showWhen="android, ios"> <button color="nirea" ion-button block (click)="tomarFoto()">Camara</button></span>
+</ion-footer>
